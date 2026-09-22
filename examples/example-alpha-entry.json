@@ -1,0 +1,59 @@
+{
+  "company": "A Studio",
+  "dates": "Month YYYY - Month YYYY",
+  "detail": {
+    "done": "Synthetic stand-in. Nothing here describes real work.",
+    "how": "Synthetic stand-in. Nothing here describes a real approach.",
+    "metrics": [
+      "P1-B2: an example figure, invented.",
+      "P1-B3: an example figure, invented.",
+      "P1-B4: an example figure, invented.",
+      "P1-B5: an example figure, invented.",
+      "P1-B6: an example figure, invented.",
+      "P2-B1: an example figure, invented.",
+      "P2-B2: an example figure, invented.",
+      "P2-B3: an example figure, invented.",
+      "P3-B1: an example figure, invented.",
+      "P3-B2: an example figure, invented.",
+      "P3-B4: an example figure, invented.",
+      "P4-B1: an example figure, invented.",
+      "P4-B3: an example figure, invented.",
+      "P4-B4: an example figure, invented.",
+      "P5-B1: an example figure, invented.",
+      "P5-B4: an example figure, invented.",
+      "P5-B5: an example figure, invented.",
+      "P6-B1: an example figure, invented.",
+      "P6-B4: an example figure, invented.",
+      "P6-B7: an example figure, invented."
+    ]
+  },
+  "display_name": "Synthetic example engagement, modelling arm",
+  "evidence_quotes": [
+    "P1-B2: example quotation, invented, citing the approved claim of the same id.",
+    "P1-B3: example quotation, invented, citing the approved claim of the same id.",
+    "P1-B4: example quotation, invented, citing the approved claim of the same id.",
+    "P1-B5: example quotation, invented, citing the approved claim of the same id.",
+    "P1-B6: example quotation, invented, citing the approved claim of the same id.",
+    "P2-B1: example quotation, invented, citing the approved claim of the same id.",
+    "P2-B2: example quotation, invented, citing the approved claim of the same id.",
+    "P2-B3: example quotation, invented, citing the approved claim of the same id.",
+    "P3-B1: example quotation, invented, citing the approved claim of the same id.",
+    "P3-B2: example quotation, invented, citing the approved claim of the same id.",
+    "P3-B4: example quotation, invented, citing the approved claim of the same id.",
+    "P4-B1: example quotation, invented, citing the approved claim of the same id.",
+    "P4-B3: example quotation, invented, citing the approved claim of the same id.",
+    "P4-B4: example quotation, invented, citing the approved claim of the same id.",
+    "P5-B1: example quotation, invented, citing the approved claim of the same id.",
+    "P5-B4: example quotation, invented, citing the approved claim of the same id.",
+    "P5-B5: example quotation, invented, citing the approved claim of the same id.",
+    "P6-B1: example quotation, invented, citing the approved claim of the same id.",
+    "P6-B4: example quotation, invented, citing the approved claim of the same id.",
+    "P6-B7: example quotation, invented, citing the approved claim of the same id."
+  ],
+  "kind": "experience",
+  "role": "Example Role One",
+  "slug": "example-alpha",
+  "source_refs": [
+    "examples/example-alpha-canon.json"
+  ]
+}

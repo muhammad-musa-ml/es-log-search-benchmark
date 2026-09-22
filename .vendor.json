@@ -1,0 +1,52 @@
+{
+  "bundle_sha256": "54742fd07125008460cc7bedde5f273edb22b743b216be33dba2724c517447c6",
+  "declared": [
+    "tools/canonkit.py",
+    "tools/conformance.py",
+    "tools/render.py",
+    "tools/checks/__init__.py",
+    "tools/canon-bullets.json",
+    "tools/checks/check_01.py",
+    "tools/checks/check_02.py",
+    "tools/checks/check_03.py",
+    "tools/checks/check_04.py",
+    "tools/checks/check_05.py",
+    "tools/checks/check_06.py",
+    "tools/checks/check_07.py",
+    "tools/checks/check_08.py",
+    "tools/checks/check_09.py",
+    "tools/checks/check_16.py"
+  ],
+  "declared_count": 15,
+  "declared_static_count": 5,
+  "excluded_check_count": 1,
+  "excluded_checks": [
+    {
+      "reason": "CHECK-20 reads the live collections entries, so vendoring it would ship the shape of a private record inside a directory meant to be handed to a stranger -- and it asks a PROGRAMME question a vendored copy could not answer in any case.",
+      "source": "tools/checks/check_20.py"
+    }
+  ],
+  "files": {
+    "canon-bullets.json": "bf367547136fce8b000e3e52ed107ee73db10563f39afa4b5ecba9dc6247d3c7",
+    "canonkit.py": "821a34234c31476684bca8806ced9d89334775e99c62af55e5316e07b75e69f3",
+    "checks/__init__.py": "8df66ccbf50d824eaa335210497ae3f6722beba7789e2d504620e42e5f5a335a",
+    "checks/check_01.py": "9415139bb108cb35b6905fe88da03b78369da7f9871e20fef1c3e02d3f365eeb",
+    "checks/check_02.py": "74b5a2ec2eb2aa4c743809e9304cba704e7fb7afa140b91e390cdf963df15ad1",
+    "checks/check_03.py": "cfe33f7f657fcd1ed57a5b438598d5907fae814fe71f4d95e1b441b01c0c3e4c",
+    "checks/check_04.py": "b386f2683f9e6a6317495bdcf00344f19a6ac37c85c757f4c86a035c8e4e1bb1",
+    "checks/check_05.py": "8a8f188985b11c998778b0148b6414e9e4c0c98a9e06401f98ce0e9d69a9cff6",
+    "checks/check_06.py": "91ccb153c8525b7f359d3a8c32304f32eb2a23c3d25f8484415b3c650d49a47f",
+    "checks/check_07.py": "87ec1c6bbd67958cf09ac796b9a9c026703f92b02e59253d243b1f19164ba6f9",
+    "checks/check_08.py": "ad2ab73566826c7bee82184702990765639031ef33c2e4febd8408188d43d485",
+    "checks/check_09.py": "d26956f2b8cecaee813db9863fe512d6b9034f7af1e8be5b543f724589141063",
+    "checks/check_16.py": "5cddcf2d0e30b778abab3076d84e9625889a10872ea55b10a92fb80bd3a3a410",
+    "conformance.py": "ab94efa9c88b9d516f8dab919ffd51b56644832e4ad01f0c98b6c27817baf3ac",
+    "render.py": "6afba1720e3dc97926c416de9c58cacb1119825857f285ddc40b4bcc82dc21d4"
+  },
+  "missing_sources": [],
+  "schema": "canonkit/vendor/1",
+  "schema_version": "canonkit/1",
+  "source_repo_head": "59829525a41111905510df685379c0ed3cb158d9",
+  "vendored_at": "2026-09-21T18:53:09.617847-05:00",
+  "vendored_at_utc": "2026-09-21T23:53:09.617880+00:00"
+}

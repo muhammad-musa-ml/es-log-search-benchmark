@@ -1,0 +1,124 @@
+# What an artifact does NOT commit.
+
+# READ THIS BEFORE COPYING A RULE FROM THE TOOLING REPOSITORY'S .gitignore.
+#
+# THIS FILE IS THE INVERSE OF THAT ONE ON THE ONE RULE THAT MATTERS, and the
+# inversion is deliberate rather than an oversight to be tidied up:
+#
+#   TOOLING REPOSITORY   ignores results/, because that repository produces no
+#                        measurements. Anything appearing under results/ there
+#                        is a stray output, not evidence.
+#   AN ARTIFACT (HERE)   TRACKS results/, because a tracked machine-written file
+#                        under results/ is the thing CHECK-07 verifies, and it
+#                        verifies it with `git ls-files` rather than with "the
+#                        file exists". An artifact whose results/ is ignored has
+#                        no evidence at all -- it FAILS the check, silently, and
+#                        the failure looks like a checker bug rather than a
+#                        missing commit.
+#
+# So: THERE IS NO `results/` LINE IN THIS FILE, and adding one would break the
+# artifact contract. This paragraph exists because a later author copying rules
+# between the two repositories is overwhelmingly likely to carry that one line
+# in the wrong direction.
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtual environments. The pinned, hash-installed environment is rebuilt from
+# requirements.txt; the installed tree is never evidence.
+.venv/
+venv/
+
+# SECRETS. Never committed, in any form. An artifact is a directory an
+# interviewer may be handed.
+.env
+.env.*
+*.pem
+*.key
+
+# LANDED DATA AND DERIVED CORPORA -- a licence rule, not a size rule.
+#
+# Derived corpora are NEVER redistributed. An artifact ships the extraction
+# script and the frozen id lists so the set can be REBUILT, plus the source's
+# own attribution block. It does not ship the source's material, however
+# convenient that would be.
+#
+# This is enforced and not merely documented: finalize.py FAILS when a landed
+# data file is tracked. The rules below keep the common shapes out of the index
+# in the first place, so that guard is a backstop rather than the only line.
+data/
+raw/
+corpus/
+downloads/
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.parquet
+*.jsonl
+*.csv
+*.xml
+*.db
+*.sqlite
+*.sqlite3
+
+# Model weights and caches. Large, re-downloadable, and not evidence.
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+.cache/
+hf_cache/
+
+# Checker reports are written OUTSIDE the artifact by default, because the
+# checker must not mutate what it checks: a report written inside becomes an
+# input to any hash over this tree and shows up in git status, which then needs
+# a permanent exclusion rule someone will forget. This line covers the case
+# where a reader deliberately opts into an in-artifact report.
+.reports/
+
+# The frozen id lists are the exception to the data rules above and ARE
+# committed -- they are what makes the derived set rebuildable. Re-included
+# explicitly, after the broad rules, so ordering does not decide the outcome.
+!ids/
+!ids/**
+!**/*.ids.txt
+
+# results/raw/ is the SECOND exception, and it is the one that bites silently.
+#
+# `raw/` in the licence block above is a rule about SOURCE CORPORA, and a bare
+# directory pattern matches at ANY depth -- so it also caught results/raw/,
+# which is where runmeta.raw_dir() writes the PER-ITEM RUN RECORDS. Two
+# different meanings of the word "raw" collided, and the header of this very
+# file insists results/ must be tracked.
+#
+# MEASURED in a throwaway git repository carrying this file verbatim:
+#   git check-ignore -v results/raw/item-0001.json
+#     -> .gitignore:56:raw/    results/raw/item-0001.json      (IGNORED)
+#   git add -A then staged:  .gitignore, results/figures.json  (records absent)
+#
+# Why that is worse than it looks: CHECK-07 asks whether a machine-written file
+# under results/ is TRACKED, and figures.json is -- so CHECK-07 PASSES while the
+# per-item records verify.py re-walks to re-derive that very figure are missing
+# from the index. The check stays green while the property it stands for is
+# broken, and a handed-over artifact cloned fresh cannot verify its own chain.
+#
+# Re-included after the broad rules, same discipline as the ids block above. The
+# licence rule is UNTOUCHED: a top-level raw/ source tree is still ignored by
+# line 56, which was re-confirmed against the same probe after this change.
+!results/raw/
+!results/raw/**
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

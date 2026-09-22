@@ -1,0 +1,88 @@
+{
+  "withdrawn": {
+    "status": "superseded",
+    "aggregate": false,
+    "superseded_on": "2026-09-19",
+    "marked_on": "2026-09-21",
+    "run": "the first run, 2026-07-31: a SINGLE run of each arm",
+    "reason": "This is the machine record of the first run, and its two headline ratios are REFUTED rather than merely out of date. The benchmark was re-measured on 2026-09-19 at three replicates of each arm, and both ratios below sit ABOVE every replicate on both clocks -- so they are not a noisy reading of the same quantity. The current figures are in results/RESULTS.md and the per-replicate rows are in RUN-RECORD.md.",
+    "see": "RESULTS-2026-07-31-SUPERSEDED.md, which keeps the first run's document whole and unedited",
+    "quotation_status": "frozen -- the 1.45 and 3.89 speedup values below are the WITHDRAWN readings. They are kept, not deleted, because a withdrawn machine record is the evidence of what was withdrawn and deleting it would leave the supersession pointing at nothing. No document in this repository may cite either as a current figure.",
+    "sibling_records": [
+      "results/results.json",
+      "results/run-full.log"
+    ],
+    "why_this_block_exists": "Until 2026-09-21 NOTHING in the tree distinguished this record from a live one. The README and the superseded document both say the derivation excludes it, but the FILE said nothing, so anything that later aggregated results/ would have folded it in and nobody could have traced it afterwards. A standing check for withdrawn figures found it, which is what that check is for."
+  },
+  "corpus": {
+    "doc_count": 2500000,
+    "load_seconds_before": 154.5,
+    "load_seconds_after": 135.9,
+    "es_version": "8.15.0"
+  },
+  "n_queries": 500,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel"
+  },
+  "total_runtime_seconds": 381.2,
+  "before": {
+    "index": "logs-before",
+    "n": 500,
+    "wall_ms": {
+      "p50": 63.63,
+      "p95": 81.63,
+      "p99": 90.21,
+      "mean": 63.06,
+      "max": 98.77
+    },
+    "server_took_ms": {
+      "p50": 19.0,
+      "p95": 35.0,
+      "p99": 45.0,
+      "mean": 18.97,
+      "max": 52.0
+    }
+  },
+  "after": {
+    "index": "logs-after",
+    "n": 500,
+    "wall_ms": {
+      "p50": 52.32,
+      "p95": 56.15,
+      "p99": 58.46,
+      "mean": 52.1,
+      "max": 60.99
+    },
+    "server_took_ms": {
+      "p50": 7.0,
+      "p95": 9.0,
+      "p99": 10.0,
+      "mean": 6.27,
+      "max": 13.0
+    }
+  },
+  "equivalence": {
+    "queries": 500,
+    "total_hits_before": 2659272,
+    "total_hits_after": 2470027,
+    "before_is_superset_by_volume": true,
+    "speedup_not_bought_by_returning_less": true,
+    "zero_hit_queries_before": 0,
+    "zero_hit_queries_after": 0,
+    "note": "Identical hit sets are NOT expected: analyzed text fields tokenize dimension values, so the naive design matches a superset. The one-sided check is what makes the latency comparison meaningful."
+  },
+  "delta_wall": {
+    "p50_ms": 11.31,
+    "p95_ms": 25.48,
+    "_p95_speedup_x_status": "WITHDRAWN on 2026-09-19 and superseded by the three-replicate re-measurement. Kept because a withdrawn machine record is the evidence of what was withdrawn. Not to be aggregated, quoted or compared.",
+    "p95_speedup_x": 1.45
+  },
+  "delta_server": {
+    "p50_ms": 12.0,
+    "p95_ms": 26.0,
+    "_p95_speedup_x_status": "WITHDRAWN on 2026-09-19 and superseded by the three-replicate re-measurement. Kept because a withdrawn machine record is the evidence of what was withdrawn. Not to be aggregated, quoted or compared.",
+    "p95_speedup_x": 3.89
+  }
+}

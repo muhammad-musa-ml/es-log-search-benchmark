@@ -1,0 +1,445 @@
+{
+  "artifact": "es-log-search-benchmark",
+  "dated_at": "2026-09-19T06:30:54.568681-05:00",
+  "figures": {
+    "corpus_doc_count_per_index": {
+      "agreed_across_records": 3,
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "denominator": 3,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "corpus_size",
+      "not_shown": "Documents in EACH index, not across both. Both are generated from one seed, so the two corpora are identical and the loader refuses outright if the live counts differ.",
+      "numerator": 3,
+      "population": 3,
+      "population_label": "replicates whose two indices were independently counted after the force-merge and agreed",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "reproduce_criterion": {
+        "kind": "absolute",
+        "tolerance": 0
+      },
+      "runs": [
+        {
+          "doc_count": 2500000,
+          "record": "replicate-2-pair.json",
+          "replicate": 2
+        },
+        {
+          "doc_count": 2500000,
+          "record": "replicate-3-pair.json",
+          "replicate": 3
+        },
+        {
+          "doc_count": 2500000,
+          "record": "replicate-4-pair.json",
+          "replicate": 4
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "documents",
+      "value": 2500000
+    },
+    "queries_replayed_per_arm": {
+      "arm_records_agreeing": 6,
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "denominator": 6,
+      "derived_from": [
+        "replicate-2-after.json",
+        "replicate-2-before.json",
+        "replicate-3-after.json",
+        "replicate-3-before.json",
+        "replicate-4-after.json",
+        "replicate-4-before.json"
+      ],
+      "kind": "replayed_population",
+      "not_shown": "The MEASURED sample only. Each arm also runs an uncounted 50-lookup warmup first, so neither side pays a cold-cache penalty the other avoids; those warmup lookups are not in this count and are not in any latency distribution.",
+      "numerator": 6,
+      "population": 6,
+      "population_label": "per-arm records that replayed the seeded sample and agreed on its size",
+      "predicate": {
+        "record_kind": "arm"
+      },
+      "reproduce_criterion": {
+        "kind": "absolute",
+        "tolerance": 0
+      },
+      "runs": [
+        {
+          "arm": "after",
+          "n": 500,
+          "record": "replicate-2-after.json",
+          "replicate": 2
+        },
+        {
+          "arm": "before",
+          "n": 500,
+          "record": "replicate-2-before.json",
+          "replicate": 2
+        },
+        {
+          "arm": "after",
+          "n": 500,
+          "record": "replicate-3-after.json",
+          "replicate": 3
+        },
+        {
+          "arm": "before",
+          "n": 500,
+          "record": "replicate-3-before.json",
+          "replicate": 3
+        },
+        {
+          "arm": "after",
+          "n": 500,
+          "record": "replicate-4-after.json",
+          "replicate": 4
+        },
+        {
+          "arm": "before",
+          "n": 500,
+          "record": "replicate-4-before.json",
+          "replicate": 4
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "lookups",
+      "value": 500
+    },
+    "server_p95_speedup_x": {
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "clock": "server_took_ms",
+      "denominator": 3,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "speedup_over_replicates",
+      "not_shown": "Server-side `took` only: Elasticsearch's own reported execution time, excluding HTTP transport and client overhead. It is the honest measure of what the mapping change bought and must never be read as what a caller experiences -- the wall-clock figure beside it is that. The published value is the WEAKEST of the replicates, not a central tendency; the raw runs travel in `runs`.",
+      "numerator": 3,
+      "observed_range": [
+        3.181818,
+        3.4
+      ],
+      "population": 3,
+      "population_label": "replicates in which the same seeded lookup sample was replayed against both index designs",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "reproduce_criterion": {
+        "kind": "relative",
+        "tolerance": 0.25
+      },
+      "runs": [
+        {
+          "after_p95": 11.0,
+          "before_p95": 35.0,
+          "clock": "server_took_ms",
+          "delta_p95_ms": 24.0,
+          "record": "replicate-2-pair.json",
+          "replicate": 2,
+          "speedup_x": 3.181818
+        },
+        {
+          "after_p95": 11.0,
+          "before_p95": 37.0,
+          "clock": "server_took_ms",
+          "delta_p95_ms": 26.0,
+          "record": "replicate-3-pair.json",
+          "replicate": 3,
+          "speedup_x": 3.363636
+        },
+        {
+          "after_p95": 10.0,
+          "before_p95": 34.0,
+          "clock": "server_took_ms",
+          "delta_p95_ms": 24.0,
+          "record": "replicate-4-pair.json",
+          "replicate": 4,
+          "speedup_x": 3.4
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "x",
+      "value": 3.181818,
+      "value_rule": "the smallest ratio any replicate produced; every replicate in the population met or beat it"
+    },
+    "total_hits_explicit_design": {
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "denominator": 3,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "agreed_count",
+      "not_shown": "The exact design's total. It is SMALLER than the naive design's by design, and the guard that makes the latency comparison meaningful is one-sided: the fuzzy design must match at least as many, or a faster arm would simply be a smaller query.",
+      "numerator": 3,
+      "population": 3,
+      "population_label": "replicates that agreed on this total, which the fixed seed and fixed lookup order make deterministic",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "read_from": "equivalence.total_hits_after",
+      "reproduce_criterion": {
+        "kind": "absolute",
+        "tolerance": 0
+      },
+      "runs": [
+        {
+          "record": "replicate-2-pair.json",
+          "replicate": 2,
+          "value": 2470027
+        },
+        {
+          "record": "replicate-3-pair.json",
+          "replicate": 3,
+          "value": 2470027
+        },
+        {
+          "record": "replicate-4-pair.json",
+          "replicate": 4,
+          "value": 2470027
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "matched documents",
+      "value": 2470027
+    },
+    "total_hits_naive_design": {
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "denominator": 3,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "agreed_count",
+      "not_shown": "Summed over the whole replayed sample, not per lookup. The two designs are NOT expected to return identical hit sets: analyzed text fields tokenize dimension values, so the dynamic-mapping design is genuinely fuzzier and matches a superset. That is what makes it the wrong tool, not an artifact of the benchmark.",
+      "numerator": 3,
+      "population": 3,
+      "population_label": "replicates that agreed on this total, which the fixed seed and fixed lookup order make deterministic",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "read_from": "equivalence.total_hits_before",
+      "reproduce_criterion": {
+        "kind": "absolute",
+        "tolerance": 0
+      },
+      "runs": [
+        {
+          "record": "replicate-2-pair.json",
+          "replicate": 2,
+          "value": 2659272
+        },
+        {
+          "record": "replicate-3-pair.json",
+          "replicate": 3,
+          "value": 2659272
+        },
+        {
+          "record": "replicate-4-pair.json",
+          "replicate": 4,
+          "value": 2659272
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "matched documents",
+      "value": 2659272
+    },
+    "wall_p95_speedup_x": {
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "clock": "wall_ms",
+      "denominator": 3,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "speedup_over_replicates",
+      "not_shown": "Client-side wall time, including HTTP transport and Python-client overhead. It carries a roughly constant floor the index design cannot touch, which dilutes the ratio -- so it is SMALLER than the server-side figure by construction and is reported because quoting only the flattering clock would be the whole problem. The published value is the WEAKEST of the replicates; the raw runs travel in `runs`.",
+      "numerator": 3,
+      "observed_range": [
+        1.379005,
+        1.407908
+      ],
+      "population": 3,
+      "population_label": "replicates in which the same seeded lookup sample was replayed against both index designs",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "reproduce_criterion": {
+        "kind": "relative",
+        "tolerance": 0.25
+      },
+      "runs": [
+        {
+          "after_p95": 58.68,
+          "before_p95": 80.92,
+          "clock": "wall_ms",
+          "delta_p95_ms": 22.24,
+          "record": "replicate-2-pair.json",
+          "replicate": 2,
+          "speedup_x": 1.379005
+        },
+        {
+          "after_p95": 57.66,
+          "before_p95": 81.18,
+          "clock": "wall_ms",
+          "delta_p95_ms": 23.52,
+          "record": "replicate-3-pair.json",
+          "replicate": 3,
+          "speedup_x": 1.407908
+        },
+        {
+          "after_p95": 56.84,
+          "before_p95": 78.64,
+          "clock": "wall_ms",
+          "delta_p95_ms": 21.8,
+          "record": "replicate-4-pair.json",
+          "replicate": 4,
+          "speedup_x": 1.383533
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "x",
+      "value": 1.379005,
+      "value_rule": "the smallest ratio any replicate produced; every replicate in the population met or beat it"
+    },
+    "zero_hit_lookups": {
+      "arm_replays_examined": 6,
+      "canon_bullet": "unbacked:no-canon-bullet",
+      "canon_value": null,
+      "denominator": 3000,
+      "derived_from": [
+        "replicate-2-pair.json",
+        "replicate-3-pair.json",
+        "replicate-4-pair.json"
+      ],
+      "kind": "zero_hit_total",
+      "not_shown": "A count of occurrences over a stated denominator, never a rate. A zero here is a MEASURED zero: the denominator beside it says how many lookups were examined to find it, which is what separates it from a check that examined nothing. This is the condition that failed at smoke corpus size, where 11 lookups across the two arms matched nothing.",
+      "numerator": 0,
+      "population": 3000,
+      "population_label": "arm replays examined for lookups that matched nothing (both arms of every replicate)",
+      "predicate": {
+        "record_kind": "pair"
+      },
+      "reproduce_criterion": {
+        "kind": "absolute",
+        "tolerance": 0
+      },
+      "runs": [
+        {
+          "lookups_examined": 1000,
+          "record": "replicate-2-pair.json",
+          "replicate": 2,
+          "zero_hit_after": 0,
+          "zero_hit_before": 0
+        },
+        {
+          "lookups_examined": 1000,
+          "record": "replicate-3-pair.json",
+          "replicate": 3,
+          "zero_hit_after": 0,
+          "zero_hit_before": 0
+        },
+        {
+          "lookups_examined": 1000,
+          "record": "replicate-4-pair.json",
+          "replicate": 4,
+          "zero_hit_after": 0,
+          "zero_hit_before": 0
+        }
+      ],
+      "similar": null,
+      "similar_reason_ref": "RUN-RECORD.md#the-replicates",
+      "threshold_claim": false,
+      "tier_achieved": null,
+      "unit": "lookups",
+      "value": 0
+    }
+  },
+  "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+  "population": {
+    "derived_from": 9,
+    "derived_from_records": [
+      "replicate-2-after.json",
+      "replicate-2-before.json",
+      "replicate-2-pair.json",
+      "replicate-3-after.json",
+      "replicate-3-before.json",
+      "replicate-3-pair.json",
+      "replicate-4-after.json",
+      "replicate-4-before.json",
+      "replicate-4-pair.json"
+    ],
+    "excluded": 6,
+    "excluded_by_reason": [
+      {
+        "names": [
+          "replicate-1-after.json",
+          "replicate-1-before.json",
+          "replicate-1-pair.json"
+        ],
+        "reason": "the replicate's own guard array did not pass",
+        "records": 3
+      },
+      {
+        "names": [
+          "results.json"
+        ],
+        "reason": "superseded by the re-run",
+        "records": 1
+      },
+      {
+        "names": [
+          "gate.json",
+          "retractions.json"
+        ],
+        "reason": "not a per-run measurement record",
+        "records": 2
+      }
+    ],
+    "listed": 15
+  },
+  "replicates_derived_from": [
+    2,
+    3,
+    4
+  ],
+  "schema": "canonkit/figures/1",
+  "schema_version": "canonkit/1",
+  "source_run_id": "replicate-4",
+  "started_at": "2026-09-19T06:24:18.595607-05:00",
+  "started_at_utc": "2026-09-19T11:24:18.595645+00:00"
+}

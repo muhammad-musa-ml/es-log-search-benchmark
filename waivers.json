@@ -1,0 +1,8 @@
+{
+  "schema": "canonkit/waivers/1",
+  "schema_version": "canonkit/1",
+  "rule": "OWNER-AUTHORED ONLY. A waiver present in a run's output that was not in the last committed version of this file is ITSELF A FINDING, not a silenced check. Build agents run unattended, and a checker that the thing being checked can silence is not a checker. The owner round-trip is the feature, not friction to be engineered away: adding an entry here requires a human, a reason, and a commit.",
+  "entry_shape": "Each element of waivers[] is {check_id, reason, dated_at}. All three are required. reason is prose a reader can disagree with -- not a ticket id, not 'known issue'. dated_at is ISO-8601 with a real offset.",
+  "counting": "The checker prints the waiver count in its summary whether or not any are present, so waivers are countable rather than invisible. A waived check is reported as waived; it is never reported as a pass, and it never disappears from the population.",
+  "waivers": []
+}

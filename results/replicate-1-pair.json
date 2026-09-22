@@ -1,0 +1,177 @@
+{
+  "after": {
+    "index": "logs-after",
+    "n": 50,
+    "server_took_ms": {
+      "max": 31.0,
+      "mean": 3.32,
+      "p50": 3.0,
+      "p95": 4.0,
+      "p99": 31.0
+    },
+    "wall_ms": {
+      "max": 80.27,
+      "mean": 50.1,
+      "p50": 49.15,
+      "p95": 54.19,
+      "p99": 80.27
+    }
+  },
+  "all_guards_passed": false,
+  "artifact": "es-log-search-benchmark",
+  "before": {
+    "index": "logs-before",
+    "n": 50,
+    "server_took_ms": {
+      "max": 38.0,
+      "mean": 10.5,
+      "p50": 10.0,
+      "p95": 22.0,
+      "p99": 38.0
+    },
+    "wall_ms": {
+      "max": 89.03,
+      "mean": 57.31,
+      "p50": 56.45,
+      "p95": 70.97,
+      "p99": 89.03
+    }
+  },
+  "corpus": {
+    "doc_count": 20000,
+    "es_version": "8.15.0",
+    "load_seconds_after": 1.3,
+    "load_seconds_before": 3.0
+  },
+  "delta_server": {
+    "p50_ms": 7.0,
+    "p95_ms": 18.0,
+    "p95_speedup_x": 5.5
+  },
+  "delta_wall": {
+    "p50_ms": 7.3,
+    "p95_ms": 16.78,
+    "p95_speedup_x": 1.31
+  },
+  "environment": {
+    "elasticsearch_client": "8.19.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "python": "3.13.5"
+  },
+  "equivalence": {
+    "before_is_superset_by_volume": true,
+    "note": "Identical hit sets are NOT expected: analyzed text fields tokenize dimension values, so the naive design matches a superset. The one-sided check is what makes the latency comparison meaningful.",
+    "queries": 50,
+    "speedup_not_bought_by_returning_less": true,
+    "total_hits_after": 7058,
+    "total_hits_before": 9210,
+    "zero_hit_queries_after": 6,
+    "zero_hit_queries_before": 5
+  },
+  "finished_at": "2026-09-19T06:09:49.153923-05:00",
+  "finished_at_utc": "2026-09-19T11:09:49.351835+00:00",
+  "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+  "guards": [
+    {
+      "hit_volume_ratio": 1.304902,
+      "id": "G1-equivalence-one-sided",
+      "minimum_required": 30,
+      "passed": true,
+      "population": 50,
+      "population_label": "replayed logical lookups whose hit counts were collected on BOTH indices",
+      "total_hits_after": 7058,
+      "total_hits_before": 9210
+    },
+    {
+      "id": "G2-workload-coverage",
+      "minimum_required": 30,
+      "passed": false,
+      "population": 50,
+      "population_label": "logical lookups replayed on BOTH indices, counted as the smaller of the two arms",
+      "replayed_after": 50,
+      "replayed_before": 50,
+      "requested_queries": 50,
+      "zero_hit_queries_after": 6,
+      "zero_hit_queries_before": 5
+    },
+    {
+      "clocks": [
+        {
+          "after_is_faster": true,
+          "after_p95": 54.19,
+          "before_p95": 70.97,
+          "clock": "wall_ms"
+        },
+        {
+          "after_is_faster": true,
+          "after_p95": 4.0,
+          "before_p95": 22.0,
+          "clock": "server_took_ms"
+        }
+      ],
+      "distinct_directions": 1,
+      "id": "G3-two-clocks-agree-in-direction",
+      "minimum_required": 2,
+      "passed": true,
+      "population": 2,
+      "population_label": "independently recorded clocks whose p95 was read on BOTH arms (client wall time, server `took`)"
+    },
+    {
+      "doc_count_per_index": 20000,
+      "id": "G4-corpora-identical-size",
+      "load_seconds_after": 1.3,
+      "load_seconds_before": 3.0,
+      "minimum_required": 1,
+      "passed": true,
+      "population": 20000,
+      "population_label": "live documents counted in EACH index after the force-merge, the loader having refused a mismatch"
+    }
+  ],
+  "n_queries": 50,
+  "record_kind": "pair",
+  "replicate": 1,
+  "run": {
+    "api_spend_usd": 0.0,
+    "docker_contention": {
+      "container_count": 1,
+      "containers": [
+        {
+          "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+          "name": "es-bench",
+          "status": "Up 34 seconds"
+        }
+      ],
+      "error": null,
+      "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+      "read_at": "2026-09-19T06:09:32.140401-05:00"
+    },
+    "docker_contention_at_finish": {
+      "container_count": 1,
+      "containers": [
+        {
+          "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+          "name": "es-bench",
+          "status": "Up 51 seconds"
+        }
+      ],
+      "error": null,
+      "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+      "read_at": "2026-09-19T06:09:49.153923-05:00"
+    },
+    "finished_at": "2026-09-19T06:09:49.153923-05:00",
+    "finished_at_utc": "2026-09-19T11:09:49.351835+00:00",
+    "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+    "gpu_minutes": 0.0,
+    "record_path": "/path/to/es-log-search-benchmark/results/raw/replicate-1.json",
+    "run_id": "replicate-1",
+    "started_at": "2026-09-19T06:09:32.140401-05:00",
+    "started_at_utc": "2026-09-19T11:09:32.140434+00:00",
+    "wall_seconds": 16.811638300016057
+  },
+  "schema": "eslogbench/pair/1",
+  "schema_version": "canonkit/1",
+  "started_at": "2026-09-19T06:09:32.140401-05:00",
+  "started_at_utc": "2026-09-19T11:09:32.140434+00:00",
+  "total_runtime_seconds": 16.7
+}

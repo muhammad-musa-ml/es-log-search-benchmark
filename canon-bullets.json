@@ -1,0 +1,760 @@
+{
+  "_note": "SYNTHETIC EXAMPLE CORPUS. Same schema as a real snapshot; every claim in it is invented, and every figure below describes this corpus and nothing else. The four documents under examples/ are its sources: each source row's bytes and sha256 are the digest of the file that row names, so a reader can recompute them. The one record without the pending marker is the last key in sorted order, so the exception branch has a member. Regenerate a real one with tools/canon_snapshot.py against your own sources.",
+  "build_paths": {
+    "example-alpha": [
+      {
+        "artifact": "alpha-artifact-1: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P1",
+        "slug": "alpha-artifact-1"
+      },
+      {
+        "artifact": "alpha-artifact-2: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P2",
+        "slug": "alpha-artifact-2"
+      },
+      {
+        "artifact": "alpha-artifact-3: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P3",
+        "slug": "alpha-artifact-3"
+      },
+      {
+        "artifact": "alpha-artifact-4: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P4",
+        "slug": "alpha-artifact-4"
+      },
+      {
+        "artifact": "alpha-artifact-5: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P5",
+        "slug": "alpha-artifact-5"
+      },
+      {
+        "artifact": "alpha-artifact-6: an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P6",
+        "slug": "alpha-artifact-6"
+      }
+    ],
+    "example-beta": [
+      {
+        "artifact": "beta-artifact-1 - an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P1",
+        "slug": "beta-artifact-1"
+      },
+      {
+        "artifact": "beta-artifact-2 - an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P2",
+        "slug": "beta-artifact-2"
+      },
+      {
+        "artifact": "beta-artifact-3 - an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P3",
+        "slug": "beta-artifact-3"
+      },
+      {
+        "artifact": "beta-artifact-4 - an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P4",
+        "slug": "beta-artifact-4"
+      },
+      {
+        "artifact": "beta-artifact-5 - an example project description. The toolkit reads this field only to check that a cited slug resolves; the prose is synthetic.",
+        "project": "P5",
+        "slug": "beta-artifact-5"
+      }
+    ]
+  },
+  "bullets": {
+    "example-alpha:P1-B2": {
+      "backing": "Example claim P1 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P1-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B2. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P1-B3": {
+      "backing": "Example claim P1 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P1-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B3. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P1-B4": {
+      "backing": "Example claim P1 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P1-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B4. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P1-B5": {
+      "backing": "Example claim P1 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P1-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B5. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P1-B6": {
+      "backing": "Example claim P1 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P1-B6",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B6",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B6. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P2-B1": {
+      "backing": "Example claim P2 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P2-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B1. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P2-B2": {
+      "backing": "Example claim P2 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P2-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B2. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P2-B3": {
+      "backing": "Example claim P2 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P2-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B3. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P3-B1": {
+      "backing": "Example claim P3 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P3-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B1. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P3-B2": {
+      "backing": "Example claim P3 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P3-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B2. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P3-B4": {
+      "backing": "Example claim P3 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P3-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B4. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P4-B1": {
+      "backing": "Example claim P4 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P4-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B1. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P4-B3": {
+      "backing": "Example claim P4 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P4-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B3. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P4-B4": {
+      "backing": "Example claim P4 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P4-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B4. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P5-B1": {
+      "backing": "Example claim P5 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P5-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B1. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P5-B4": {
+      "backing": "Example claim P5 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P5-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B4. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P5-B5": {
+      "backing": "Example claim P5 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P5-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B5. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P6-B1": {
+      "backing": "Example claim P6 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P6-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P6-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P6",
+      "text": "EXAMPLE CLAIM P6-B1. Reduced the median end-to-end latency of the P6 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P6-B4": {
+      "backing": "Example claim P6 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P6-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P6-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P6",
+      "text": "EXAMPLE CLAIM P6-B4. Reduced the median end-to-end latency of the P6 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-alpha:P6-B7": {
+      "backing": "Example claim P6 not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-alpha",
+      "display_ref": null,
+      "extra_keys": [],
+      "id": "P6-B7",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P6-B7",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P6",
+      "text": "EXAMPLE CLAIM P6-B7. Reduced the median end-to-end latency of the P6 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B1": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B1",
+      "extra_keys": [],
+      "id": "P1-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B1. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B2": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B2",
+      "extra_keys": [],
+      "id": "P1-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B2. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B3": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B3",
+      "extra_keys": [],
+      "id": "P1-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B3. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B4": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B4",
+      "extra_keys": [],
+      "id": "P1-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B4. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B5": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B5",
+      "extra_keys": [],
+      "id": "P1-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B5. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P1-B6": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-1-B6",
+      "extra_keys": [],
+      "id": "P1-B6",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P1-B6",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P1",
+      "text": "EXAMPLE CLAIM P1-B6. Reduced the median end-to-end latency of the P1 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B1": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B1",
+      "extra_keys": [],
+      "id": "P2-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B1. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B2": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B2",
+      "extra_keys": [],
+      "id": "P2-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B2. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B3": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B3",
+      "extra_keys": [],
+      "id": "P2-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B3. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B4": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B4",
+      "extra_keys": [],
+      "id": "P2-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B4. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B5": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B5",
+      "extra_keys": [],
+      "id": "P2-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B5. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P2-B7": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-2-B7",
+      "extra_keys": [],
+      "id": "P2-B7",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P2-B7",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P2",
+      "text": "EXAMPLE CLAIM P2-B7. Reduced the median end-to-end latency of the P2 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P3-B1": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-3-B1",
+      "extra_keys": [],
+      "id": "P3-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B1. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P3-B2": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-3-B2",
+      "extra_keys": [],
+      "id": "P3-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B2. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P3-B3": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-3-B3",
+      "extra_keys": [],
+      "id": "P3-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B3. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P3-B4": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-3-B4",
+      "extra_keys": [],
+      "id": "P3-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B4. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P3-B5": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-3-B5",
+      "extra_keys": [],
+      "id": "P3-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P3-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P3",
+      "text": "EXAMPLE CLAIM P3-B5. Reduced the median end-to-end latency of the P3 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B1": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B1",
+      "extra_keys": [],
+      "id": "P4-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B1. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B2": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B2",
+      "extra_keys": [],
+      "id": "P4-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B2. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B3": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B3",
+      "extra_keys": [],
+      "id": "P4-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B3. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B4": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B4",
+      "extra_keys": [],
+      "id": "P4-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B4. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B5": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B5",
+      "extra_keys": [],
+      "id": "P4-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B5. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P4-B6": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-4-B6",
+      "extra_keys": [
+        "public"
+      ],
+      "id": "P4-B6",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P4-B6",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P4",
+      "text": "EXAMPLE CLAIM P4-B6. Reduced the median end-to-end latency of the P4 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B1": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B1",
+      "extra_keys": [],
+      "id": "P5-B1",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B1",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B1. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B2": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B2",
+      "extra_keys": [],
+      "id": "P5-B2",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B2",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B2. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B3": {
+      "backing": "Example claim, and the ONLY artifact-backed bullet in this example corpus: it is cited to the example measured artifact whose slug is example-cache-benchmark. Exactly one record here carries no pending marker, so the exception branch has a member rather than an empty list.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B3",
+      "extra_keys": [
+        "public"
+      ],
+      "id": "P5-B3",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B3",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This row is the already-run exception -- its counterpart was measured before this corpus was written, which is why it carries no pending marker. Synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B3. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B4": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B4",
+      "extra_keys": [],
+      "id": "P5-B4",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B4",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B4. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B5": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B5",
+      "extra_keys": [],
+      "id": "P5-B5",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B5",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B5. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    },
+    "example-beta:P5-B6": {
+      "backing": "Example claim not yet run. This record exists so a claim-verification check has a list of approved claims to compare an artifact's claim-under-test block against. It records no real measurement.",
+      "canon": "example-beta",
+      "display_ref": "BP-5-B6",
+      "extra_keys": [],
+      "id": "P5-B6",
+      "metric": "example median latency 900 ms to 540 ms over 1,000 replayed requests (40% reduction), P5-B6",
+      "metric_basis": "Denominator: 1,000 requests replayed from a frozen capture, so the figure is a function of that fixed population and not of live traffic. This is synthetic example text shipped with the toolkit; it carries no real measurement.",
+      "project": "P5",
+      "text": "EXAMPLE CLAIM P5-B6. Reduced the median end-to-end latency of the P5 sample pipeline from 900 ms to 540 ms over a fixed 1,000-request replay, and reported the population the figure is a function of."
+    }
+  },
+  "census": {
+    "after": "2026-01-01-000000--example-read--after.json",
+    "before": "2026-01-01-000000--example-read--before.json",
+    "files_censused": 4,
+    "findings": 0,
+    "records_dir": "_records/census",
+    "scope": "FULL TREE: every file under the example source directory beside this corpus, walked recursively. The strongest census available here; a narrower scope would be a weaker proof."
+  },
+  "counts": {
+    "build_path_slugs": 11,
+    "bullets_total": 49,
+    "evidence_quotes_per_canon": {
+      "example-alpha": 20,
+      "example-beta": 29
+    },
+    "id_collisions": 17,
+    "id_collisions_list": [
+      "P1-B2",
+      "P1-B3",
+      "P1-B4",
+      "P1-B5",
+      "P1-B6",
+      "P2-B1",
+      "P2-B2",
+      "P2-B3",
+      "P3-B1",
+      "P3-B2",
+      "P3-B4",
+      "P4-B1",
+      "P4-B3",
+      "P4-B4",
+      "P5-B1",
+      "P5-B4",
+      "P5-B5"
+    ],
+    "not_yet_run_exceptions": [
+      "example-beta:P5-B3"
+    ],
+    "per_canon": {
+      "example-alpha": 20,
+      "example-beta": 29
+    },
+    "sources": 4,
+    "with_metric_basis": 49,
+    "with_not_yet_run": 48
+  },
+  "expected": {
+    "build_path_slugs": 11,
+    "bullets_total": 49,
+    "evidence_quotes_per_canon": {
+      "example-alpha": 20,
+      "example-beta": 29
+    },
+    "id_collisions": 17,
+    "per_canon": {
+      "example-alpha": 20,
+      "example-beta": 29
+    },
+    "sources": 4,
+    "with_metric_basis": 49,
+    "with_not_yet_run": 48
+  },
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "generated_at_utc": "2026-01-01T00:00:00Z",
+  "needles": {
+    "long_form_refused": "Example claim not yet run",
+    "not_yet_run": "not yet run"
+  },
+  "schema": "canon-bullets/1",
+  "schema_version": 1,
+  "slug_citations": {
+    "example-alpha": {
+      "alpha-substrate": {
+        "bullet_population": 20,
+        "bullets": 0,
+        "document": 0,
+        "locations": []
+      },
+      "example-cache-benchmark": {
+        "bullet_population": 20,
+        "bullets": 0,
+        "document": 0,
+        "locations": []
+      },
+      "example-search-benchmark": {
+        "bullet_population": 20,
+        "bullets": 0,
+        "document": 0,
+        "locations": []
+      }
+    },
+    "example-beta": {
+      "alpha-substrate": {
+        "bullet_population": 29,
+        "bullets": 0,
+        "document": 0,
+        "locations": []
+      },
+      "example-cache-benchmark": {
+        "bullet_population": 29,
+        "bullets": 1,
+        "document": 2,
+        "locations": [
+          "$.consistency_notes[2]",
+          "$.projects[4].bullets[5].backing"
+        ]
+      },
+      "example-search-benchmark": {
+        "bullet_population": 29,
+        "bullets": 0,
+        "document": 1,
+        "locations": [
+          "$.consistency_notes[13]"
+        ]
+      }
+    }
+  },
+  "sources": [
+    {
+      "bytes": 19304,
+      "canon": "example-alpha",
+      "path": "examples/example-alpha-canon.json",
+      "read_at": "2026-01-01T00:00:00.100000+00:00",
+      "role": "frozen_canon",
+      "sha256": "6fb3e24d27e1dd6987e1d411a3ac1ce6bdd0b3511b62598423c35fc664d91421"
+    },
+    {
+      "bytes": 26950,
+      "canon": "example-beta",
+      "path": "examples/example-beta-canon.json",
+      "read_at": "2026-01-01T00:00:00.200000+00:00",
+      "role": "frozen_canon",
+      "sha256": "371bf031c6f46ee91ec47327da58e352edbf1fc2c9a9663cb5a3a0187d962f3a"
+    },
+    {
+      "bytes": 3087,
+      "canon": "example-alpha",
+      "path": "examples/example-alpha-entry.json",
+      "read_at": "2026-01-01T00:00:00.300000+00:00",
+      "role": "live_collections",
+      "sha256": "98724bda981317fcb51a1b6c798dcf4747110703e58cb97d1998048d24f9d6f1"
+    },
+    {
+      "bytes": 4255,
+      "canon": "example-beta",
+      "path": "examples/example-beta-entry.json",
+      "read_at": "2026-01-01T00:00:00.400000+00:00",
+      "role": "live_collections",
+      "sha256": "385c1f90efe574d533c07ccd14bec60f85277b2f1b0b4e355367c7a4d799011c"
+    }
+  ]
+}

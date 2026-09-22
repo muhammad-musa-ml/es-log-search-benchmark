@@ -1,0 +1,83 @@
+{
+  "arm": "after",
+  "artifact": "es-log-search-benchmark",
+  "corpus": {
+    "doc_count": 2500000,
+    "es_version": "8.15.0",
+    "load_seconds_after": 157.8,
+    "load_seconds_before": 171.6
+  },
+  "environment": {
+    "elasticsearch_client": "8.19.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "python": "3.13.5"
+  },
+  "finished_at": "2026-09-19T06:24:14.652131-05:00",
+  "finished_at_utc": "2026-09-19T11:24:14.849096+00:00",
+  "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+  "index": "logs-after",
+  "n": 500,
+  "n_queries": 500,
+  "queries_compared_with_other_arm": 500,
+  "record_kind": "arm",
+  "replicate": 3,
+  "run": {
+    "api_spend_usd": 0.0,
+    "docker_contention": {
+      "container_count": 1,
+      "containers": [
+        {
+          "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+          "name": "es-bench",
+          "status": "Up 8 minutes"
+        }
+      ],
+      "error": null,
+      "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+      "read_at": "2026-09-19T06:17:19.227704-05:00"
+    },
+    "docker_contention_at_finish": {
+      "container_count": 1,
+      "containers": [
+        {
+          "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+          "name": "es-bench",
+          "status": "Up 15 minutes"
+        }
+      ],
+      "error": null,
+      "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+      "read_at": "2026-09-19T06:24:14.652131-05:00"
+    },
+    "finished_at": "2026-09-19T06:24:14.652131-05:00",
+    "finished_at_utc": "2026-09-19T11:24:14.849096+00:00",
+    "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+    "gpu_minutes": 0.0,
+    "record_path": "/path/to/es-log-search-benchmark/results/raw/replicate-3.json",
+    "run_id": "replicate-3",
+    "started_at": "2026-09-19T06:17:19.227704-05:00",
+    "started_at_utc": "2026-09-19T11:17:19.227738+00:00",
+    "wall_seconds": 415.2144604000496
+  },
+  "schema": "eslogbench/arm/1",
+  "schema_version": "canonkit/1",
+  "server_took_ms": {
+    "max": 19.0,
+    "mean": 6.92,
+    "p50": 7.0,
+    "p95": 11.0,
+    "p99": 16.0
+  },
+  "started_at": "2026-09-19T06:17:19.227704-05:00",
+  "started_at_utc": "2026-09-19T11:17:19.227738+00:00",
+  "total_hits": 2470027,
+  "wall_ms": {
+    "max": 67.99,
+    "mean": 52.67,
+    "p50": 52.66,
+    "p95": 57.66,
+    "p99": 64.49
+  },
+  "zero_hit_queries": 0
+}

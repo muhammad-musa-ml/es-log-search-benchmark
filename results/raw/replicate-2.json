@@ -1,0 +1,60 @@
+{
+  "all_guards_passed": true,
+  "api_spend_usd": 0.0,
+  "argv": [
+    "2500000",
+    "500",
+    "--replicate",
+    "2"
+  ],
+  "doc_count_loaded": 2500000,
+  "doc_count_requested": 2500000,
+  "docker_contention": {
+    "container_count": 1,
+    "containers": [
+      {
+        "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+        "name": "es-bench",
+        "status": "Up About a minute"
+      }
+    ],
+    "error": null,
+    "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+    "read_at": "2026-09-19T06:10:24.506645-05:00"
+  },
+  "docker_contention_at_finish": {
+    "container_count": 1,
+    "containers": [
+      {
+        "image": "docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e",
+        "name": "es-bench",
+        "status": "Up 8 minutes"
+      }
+    ],
+    "error": null,
+    "probe": "docker ps --no-trunc --format {{.Names}}\t{{.Image}}\t{{.Status}}",
+    "read_at": "2026-09-19T06:17:14.868248-05:00"
+  },
+  "elasticsearch_client": "8.19.3",
+  "env": {
+    "cpu_count": 24,
+    "machine": "AMD64",
+    "platform": "win32",
+    "python": "3.13.5"
+  },
+  "es_server_version": "8.15.0",
+  "finished_at": "2026-09-19T06:17:14.868248-05:00",
+  "finished_at_utc": "2026-09-19T11:17:15.061663+00:00",
+  "gate_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+  "gpu_minutes": 0.0,
+  "host": "http://localhost:9200",
+  "n_queries_requested": 500,
+  "replicate": 2,
+  "run_id": "replicate-2",
+  "schema": "eslogbench/run/1",
+  "schema_version": "canonkit/1",
+  "started_at": "2026-09-19T06:10:24.506645-05:00",
+  "started_at_utc": "2026-09-19T11:10:24.506678+00:00",
+  "total_runtime_seconds": 410.0,
+  "wall_seconds": 410.14375699998345
+}

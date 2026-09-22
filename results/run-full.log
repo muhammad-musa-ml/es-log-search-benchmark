@@ -1,0 +1,44 @@
+=== LOAD: 2,500,000 docs into each index ===
+[load] Elasticsearch 8.15.0 at http://localhost:9200
+[load] created logs-before
+[load] created logs-after
+[load] logs-before: 250,000/2,500,000 (16s)
+[load] logs-before: 500,000/2,500,000 (32s)
+[load] logs-before: 750,000/2,500,000 (47s)
+[load] logs-before: 1,000,000/2,500,000 (63s)
+[load] logs-before: 1,250,000/2,500,000 (78s)
+[load] logs-before: 1,500,000/2,500,000 (93s)
+[load] logs-before: 1,750,000/2,500,000 (109s)
+[load] logs-before: 2,000,000/2,500,000 (124s)
+[load] logs-before: 2,250,000/2,500,000 (139s)
+[load] logs-before: 2,500,000/2,500,000 (154s)
+[load] logs-before: 2,500,000 docs in 154.5s
+[load] logs-after: 250,000/2,500,000 (13s)
+[load] logs-after: 500,000/2,500,000 (26s)
+[load] logs-after: 750,000/2,500,000 (40s)
+[load] logs-after: 1,000,000/2,500,000 (54s)
+[load] logs-after: 1,250,000/2,500,000 (68s)
+[load] logs-after: 1,500,000/2,500,000 (81s)
+[load] logs-after: 1,750,000/2,500,000 (95s)
+[load] logs-after: 2,000,000/2,500,000 (108s)
+[load] logs-after: 2,250,000/2,500,000 (122s)
+[load] logs-after: 2,500,000/2,500,000 (136s)
+[load] logs-after: 2,500,000 docs in 135.9s
+[load] logs-before: 2,500,000 docs live, force-merged to 1 segment
+[load] logs-after: 2,500,000 docs live, force-merged to 1 segment
+
+=== BENCH: 500 queries against each index ===
+[bench] replaying 500 logical lookups against both indices
+[bench] logs-before: done
+[bench] logs-after: done
+
+[done] wrote \home\user\Research\es-log-search-benchmark\results\results.json
+
+--- server-side took(ms) ---
+  before  p50=    19.0  p95=    35.0  p99=    45.0
+  after   p50=     7.0  p95=     9.0  p99=    10.0
+--- client wall(ms) ---
+  before  p50=   63.63  p95=   81.63  p99=   90.21
+  after   p50=   52.32  p95=   56.15  p99=   58.46
+
+equivalence guard: {'queries': 500, 'total_hits_before': 2659272, 'total_hits_after': 2470027, 'before_is_superset_by_volume': True, 'speedup_not_bought_by_returning_less': True, 'zero_hit_queries_before': 0, 'zero_hit_queries_after': 0, 'note': 'Identical hit sets are NOT expected: analyzed text fields tokenize dimension values, so the naive design matches a superset. The one-sided check is what makes the latency comparison meaningful.'}

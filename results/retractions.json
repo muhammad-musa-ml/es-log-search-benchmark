@@ -1,0 +1,26 @@
+{
+  "_what_this_is": "Every figure this benchmark has WITHDRAWN, in every spelling it could have been written in. It is the needle set the retraction check hunts, and it is machine-read, so it is JSON rather than prose.",
+  "_the_two_here_are_REFUTED_rather_than_stale": "RESULTS-2026-07-31-SUPERSEDED.md says it in its own header: the first run's two headline ratios are REFUTED, not merely out of date. They were single runs of each arm; the re-measurement on 2026-09-19 used three replicates of each, and both original ratios sit ABOVE every replicate on both clocks. A figure that a later reading placed outside its whole range is withdrawn, whatever document it lives in.",
+  "_why_the_superseded_document_is_not_excluded": "It is scanned like every other file. Its own header adjudicates it -- the word REFUTED is in its first paragraph and the word superseded is in its title -- and that adjudication is what the check reads. No file is excluded by name here; a document that got immunity from its name would be the one place a live claim could hide.",
+  "reviewed_on": "2026-09-21",
+  "retracted": [
+    {
+      "id": "first-run-server-side-took-p95-ratio",
+      "withdrawn_on": "2026-09-19",
+      "why": "The first run's server-side `took` p95 ratio, from a single run of each arm. The three-replicate re-measurement puts every replicate below it, so it is not a noisy reading of the same quantity -- it is refuted. The current figure is in results/RESULTS.md and the per-replicate rows are in RUN-RECORD.md.",
+      "needles": [
+        "3.89"
+      ]
+    },
+    {
+      "id": "first-run-client-side-wall-p95-ratio",
+      "withdrawn_on": "2026-09-19",
+      "why": "The first run's client-side wall p95 ratio, from the same single run of each arm and refuted the same way by the same three replicates.",
+      "needles": [
+        "1.45"
+      ]
+    }
+  ],
+  "schema": "canonkit/retractions/1",
+  "schema_version": "canonkit/1"
+}

@@ -1,0 +1,62 @@
+# The Elasticsearch node this benchmark measures against.
+#
+# WHY THIS FILE EXISTS AT ALL. The node used to be a line in the README, named
+# by the tag 8.15.0. A tag is a moving reference: it resolves to different bytes
+# on different days, so "the same benchmark" can silently mean different
+# software. For a benchmark whose entire subject is how a search engine behaves,
+# the engine's build is not an incidental detail -- it is the measurement's
+# single largest input. So the node is declared here, committed, and named by
+# bytes rather than by a label somebody else controls.
+#
+# THE DIGEST BELOW IS THE MULTI-PLATFORM INDEX DIGEST, and it was pasted from
+# the output of the command that printed it rather than typed, shortened or
+# reconstructed:
+#
+#     docker buildx imagetools inspect \
+#       docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+#
+#     Name:      docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+#     MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+#     Digest:    sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e
+#
+# It is deliberately NOT one of the two per-platform digests the same image also
+# carries (linux/amd64 is sha256:7dc0d398..., linux/arm64 is sha256:d42e5ef7...).
+# Those are narrower claims -- "this image on this one architecture" rather than
+# "this image" -- and a per-platform digest quietly substituted for an index
+# digest reads as correct while meaning something smaller. The index digest lets
+# the daemon still choose the right architecture, and names fixed bytes while
+# doing it.
+#
+# 8.15.0 is the server version the benchmark's first run recorded, kept so the
+# two runs compare like with like.
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e
+    container_name: es-bench
+    environment:
+      # Single node, no security, and a fixed 2 GiB heap -- the same three
+      # settings the benchmark's first run used. The heap is pinned on both
+      # sides rather than left to the JVM's default sizing, which scales with
+      # the memory the container happens to see and would make the number a
+      # function of what else was running.
+      discovery.type: "single-node"
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: "-Xms2g -Xmx2g"
+    ports:
+      - "9200:9200"
+
+# NO NAMED VOLUME, AND THAT IS A CHOICE RATHER THAN AN OMISSION.
+#
+# Each run of this benchmark generates its own corpus from a fixed seed and
+# bulk-loads it into two freshly created indices. A node that kept its data
+# between runs would let a previous run's index, segment layout or file-system
+# cache state survive into the next one, which is precisely the kind of
+# invisible carry-over the force-merge and the uncounted warmup pass exist to
+# rule out. An ephemeral node starts every run from nothing, which is the state
+# the measurement assumes.
+#
+# The storage still lives inside the engine's own virtual machine rather than on
+# a mount from the host file system, which on this machine would cost a large
+# and entirely uninteresting I/O penalty that would land directly in the latency
+# numbers.

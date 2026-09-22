@@ -1,0 +1,115 @@
+{
+  "absent_inputs": [],
+  "artifact": "es-log-search-benchmark",
+  "assertions": [
+    "ENV-PATH-LENGTH=true",
+    "ENV-PATH-CASE=true",
+    "ENV-NOT-SYNCED=true",
+    "IMAGES-DIGEST-PINNED=true",
+    "CLIENT-HASH-PINNED=true",
+    "CORPUS-SEED-AGREES=true",
+    "INDEX-DESIGNS-COMPARABLE=true",
+    "QUERY-SAMPLE-REPRODUCIBLE=true"
+  ],
+  "dated_at": "2026-09-19T06:05:20.323652-05:00",
+  "dated_at_utc": "2026-09-19T11:05:20.323715+00:00",
+  "declared_input_count": 11,
+  "declared_inputs": [
+    "docker-compose.yml",
+    "esbench/__init__.py",
+    "esbench/bench.py",
+    "esbench/docgen.py",
+    "esbench/guards.py",
+    "esbench/load.py",
+    "esbench/mappings.py",
+    "esbench/queries.py",
+    "requirements.in",
+    "requirements.txt",
+    "run_benchmark.py"
+  ],
+  "env": {
+    "platform": "win32",
+    "python": "3.13.5"
+  },
+  "environment_probe": {
+    "error": null,
+    "reachable": true,
+    "server_version": "28.4.0"
+  },
+  "failed_ids": [],
+  "fallback_source": null,
+  "fallback_wording": "",
+  "inputs_hash": "1a65485a02837b9aeb41ef8933bafe9393f7a678cc7d2be3eaecdb72597f9b43",
+  "passed": true,
+  "realized": {
+    "CLIENT-HASH-PINNED": {
+      "certifi": {
+        "hashes": 2,
+        "version": "2026.7.22"
+      },
+      "elastic-transport": {
+        "hashes": 2,
+        "version": "8.19.0"
+      },
+      "elasticsearch": {
+        "hashes": 2,
+        "version": "8.19.3"
+      },
+      "python-dateutil": {
+        "hashes": 2,
+        "version": "2.9.0.post0"
+      },
+      "six": {
+        "hashes": 2,
+        "version": "1.17.0"
+      },
+      "typing-extensions": {
+        "hashes": 2,
+        "version": "4.16.0"
+      },
+      "urllib3": {
+        "hashes": 2,
+        "version": "2.8.0"
+      }
+    },
+    "CORPUS-SEED-AGREES": {
+      "by_source": {
+        "esbench/docgen.py": [
+          20240517
+        ],
+        "esbench/load.py": [
+          20240517
+        ]
+      },
+      "distinct": [
+        20240517
+      ]
+    },
+    "ENV-NOT-SYNCED": [],
+    "ENV-PATH-CASE": 0,
+    "ENV-PATH-LENGTH": 73,
+    "IMAGES-DIGEST-PINNED": [
+      "docker-compose.yml: docker.elastic.co/elasticsearch/elasticsearch@sha256:84a73ced8390c059e7bc2858595c68dc36e6f8bdb98895dcab0074eda35ac96e"
+    ],
+    "INDEX-DESIGNS-COMPARABLE": {
+      "after_index": "logs-after",
+      "after_properties": 11,
+      "before_index": "logs-before",
+      "designs_read": 2,
+      "error": null,
+      "mappings_differ": true,
+      "settings_shared": true
+    },
+    "QUERY-SAMPLE-REPRODUCIBLE": {
+      "built": 500,
+      "distinct_queries": 345,
+      "distinct_widths": 3,
+      "error": null,
+      "reproducible": true,
+      "requested": 500
+    }
+  },
+  "run_token": "b95e85d10fb295abef37c2034bc1a71f6f9182933dba23513867c7ab955897c2",
+  "schema": "eslogbench/gate/1",
+  "schema_version": "canonkit/1"
+}
